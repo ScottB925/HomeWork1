@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>杭州建康码</title>
+		<style type="text/css">*{
+			font-family: "微软雅黑";
+		}
+		.login-btn{
+			background-color: royalblue;
+			border: none;
+			width: 90%;
+			height: 40px;
+			line-height: 25px;
+			color: white;
+			cursor: pointer;
+			font-size: 20px;
+			font-weight: 500;
+			margin-top: 5%;
+			margin-bottom: 3%;
+			border-radius: 30px;
+		}
+		.pic{
+			text-align: center;
+			width: 460;
+			height: 180;
+		}
+		</style>
+	</head>
+	<script language="JavaScript" type="text/javascript">
+		function isAllChecked() {
+			var q1=document.getElementsByName('q1');
+			var q2=document.getElementsByName('q2');
+			var q3=document.getElementsByName('q3');
+			var q4=document.getElementsByName('q4');
+			var q5=document.getElementsByName('q5');
+			var getq1;
+			for(var i=0; i<q1.length;i++){
+				if(q1[i].checked){
+					getq1=q1[i].value;
+				}
+			}
+			console.log(getq1);
+			var getq2;
+			for(var i=0; i<q2.length;i++){
+				if(q2[i].checked){
+					getq2=q2[i].value;
+				}
+			}
+			console.log(getq2);
+			var getq3=[];
+			for(var j=0; j<q3.length; j++){
+				if(q3[j].checked){
+				getq3[j]=q3[j].value;
+				}
+			}
+			console.log(getq3);
+			var getq4=[];
+			for(var j=0; j<q4.length; j++){
+				if(q4[j].checked){
+				getq4[j]=q4[j].value;
+				}
+			}
+			console.log(getq4);
+			var getq5=[];
+			for(var j=0; j<q5.length; j++){
+				if(q5[j].checked){
+				getq5[j]=q5[j].value;
+				}
+			}
+			console.log(getq5);
+			if(!getq1 || !getq2 || !getq3.length || !getq4.length || !getq5.length){
+				alert("请在完成问卷后提交！");
+				return false;
+			}
+			return true;
+		}
+	</script>
+	<body>
+		<div class="pic">
+		<img src="0.00.png" class="pic" title="1" />
+		</div>
+		<table width=480 style="border: 1px solid #dcdcdc;" rules=none cellspacing=0; align=center >
+			<tr style="border: 20px solid #dcdcdc;">
+				<tr width=480 >
+					<td height=30 >
+						<P><font size=4px >*您最近14天是否离开过杭州或当前所在城市?(单选)</font></P><br />
+					</td>
+				</tr>
+				<tr width=480 >
+					<td height=30>
+						<form method="post">
+							&nbsp;<input type="radio" name="q1" id="no1" value="否" >&nbsp;&nbsp;否<br/>
+							<hr style="color: #dcdcdc;" align="right" width=430/>
+							&nbsp;<input type="radio" name="q1" id="yes1" value="是" >&nbsp;&nbsp;是
+							<br/><br/>
+						</form>
+						
+					</td>
+				</tr>
+			</tr>
+			<tr style="border: 20px solid #dcdcdc;">
+				<tr width=480 >
+					<td height=30 >
+						<P><font size=4 >*您最近14天是否接触过新冠确诊病人或疑似病人?(单选)</font></P>
+					</td>
+				</tr>
+				<tr width=480 >
+					<td height=30 >
+						<form method="post">
+							<br/>
+							&nbsp;<font size="3"><input type="radio" name="q2" id="no2" value="否" >&nbsp;&nbsp;否</font>
+							<hr style="color: #dcdcdc;" align="right" width=430/>
+							&nbsp;<input type="radio" name="q2" id="yes2" value="是" >&nbsp;&nbsp;是
+							<br/><br/>
+						</form>
+					</td>
+				</tr>
+			</tr>
+			<tr style="border: 20px solid #dcdcdc;">
+				<tr width=480 >
+					<td height=30 >
+						<P><font size=4 >*当前健康状况（若有以下状况，请在方框内勾选）(多选)</font></P>
+					</td>
+				</tr>
+				<tr width=480 >
+					<td height=90 >
+						<form method="post">
+							<br/>
+							&nbsp;<input type="checkbox" name="q3" id="01" value="无异常" />&nbsp;&nbsp;无异常
+							<br/>
+							<br/>
+							&nbsp;<input type="checkbox" name="q3" id="02" value="乏力" />&nbsp;&nbsp;乏力<br/>
+							<hr style="color: #dcdcdc;" align="right" width=430/>
+							&nbsp;<input type="checkbox" name="q3" id="03" value="干咳" />&nbsp;&nbsp;干咳<br/>
+							<hr style="color: #dcdcdc;" align="right" width=430/>
+							&nbsp;<input type="checkbox" name="q3" id="04" value="鼻塞" />&nbsp;&nbsp;鼻塞<br/>
+							<hr style="color: #dcdcdc;" align="right" width=430/>
+							&nbsp;<input type="checkbox" name="q3" id="05" value="流涕" />&nbsp;&nbsp;流涕<br/>
+							<hr style="color: #dcdcdc;" align="right" width=430/>
+							&nbsp;<input type="checkbox" name="q3" id="06" value="咽痛" />&nbsp;&nbsp;咽痛<br/>
+							<hr style="color: #dcdcdc;" align="right" width=430/>
+							&nbsp;<input type="checkbox" name="q3" id="07" value="腹泻" />&nbsp;&nbsp;腹泻<br/>
+							<br/><br/>
+						</form>
+					</td>
+				</tr>
+			</tr>
+			<tr style="border: 20px solid #dcdcdc;">
+				<tr width=480 >
+					<td height=30 >
+						<P>&nbsp;<font size=4 ><b> 本人郑重承诺：</b></font></P>
+					</td>
+				</tr>
+				<tr width=480 >
+					<td height=30 >
+						<form method="post">
+							&nbsp;<input type="checkbox" name="q4" id="001" value="为疫情防控,本人同意以上信息依法提交所在辖区疫情防控部门统筹管理" >&nbsp;&nbsp;为疫情防控,本人同意以上信息依法提交所在辖区疫情防控<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;部门统筹管理<br/>
+							<hr style="color: #dcdcdc;" align="right" width=430/>
+							&nbsp;<input type="checkbox" name="q5" id="002" value="上述信息是我本人填写,本人对信息内容的真实性和完整性负责.如果信息有误或缺失,本人愿承担相应的法律责任.同时,本人保证遵守防疫管控的各项规定,配合并听从各项措施和要求." >&nbsp;&nbsp;上述信息是我本人填写,本人对信息内容的真实性和完整性<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责.如果信息有误或缺失,本人愿承担相应的法律责任.同<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时,本人保证遵守防疫管控的各项规定,配合并听从各项措施<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;和要求.
+							<br/><br/>
+						</form>
+					</td>
+				</tr>
+			</tr>
+			<tr style="background-color: #dcdcdc;">
+				<td height=40 colspan=2 align=center > <a href="nice.html" style='text-decoration: none;'> <input type="button" value="提交" class="login-btn" onclick="return isAllChecked()" /></a></td>
+			</tr>
+		</table>
+	</body>
+</html>
